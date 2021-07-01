@@ -1,9 +1,0 @@
-version: '3'
-services:
-  terramino:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: terramino
-    ports:
-      - "8080:80"
