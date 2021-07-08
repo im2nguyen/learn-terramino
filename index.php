@@ -48,23 +48,24 @@
   </style>
 </head>
 <?php
-  $url = "curl http://169.254.169.254/metadata/v1/tags";
-  $instance_id = file_get_contents($url);
+  $ch = curl_init();
+  $url = "http://169.254.169.254/metadata/v1/tags";
+  $instance_id = curl_setopt($ch, CURLOPT_URL, $url);
 
-  $url = "curl http://169.254.169.254/metadata/v1/region";
-  $zone = file_get_contents($url);
+  $url = "http://169.254.169.254/metadata/v1/region";
+  $zone = curl_setopt($ch, CURLOPT_URL, $url);
 
-  $url = "curl http://169.254.169.254/metadata/v1/id";
-  $ami_id = file_get_contents($url);
+  $url = "http://169.254.169.254/metadata/v1/id";
+  $ami_id = curl_setopt($ch, CURLOPT_URL, $url);
   ?>
 
 <body>
   <div class="container">
     <div class="content">
       <h1>Terramino</h1>
-      <p><span class="attribute-name">Droplet Tags:</span><code><?php echo $ami_id; ?></code></p>
-      <p><span class="attribute-name">Droplet ID:</span><code><?php echo $instance_id; ?></code></p>
-      <p><span class="attribute-name">Droplet Region:</span><code><?php echo $zone; ?></code></p>
+      <p><span class="attribute-name">Droplet Tags:</span><code><?php echo curl_exec($instance_id); ?></code></p>
+      <p><span class="attribute-name">Droplet ID:</span><code><?php echo curl_exec($ami_id); ?></code></p>
+      <p><span class="attribute-name">Droplet Region:</span><code><?php echo curl_exec($zone); ?></code></p>
       <p>Use left and right arrow keys to move blocks.<br />Use up arrow key to flip block.</p>
     </div>
     <div class="content">
