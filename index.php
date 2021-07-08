@@ -49,29 +49,33 @@
 </head>
 <?php
   $tags = curl_init();
-  $url = "http://169.254.169.254/metadata/v1/tags";
-  curl_setopt($tags, CURLOPT_URL, $url);
-  curl_close($tags);
+  $tag_url = "http://169.254.169.254/metadata/v1/tags";
+  curl_setopt($tags, CURLOPT_URL, $tag_url);
+  curl_setopt($tags, CURLOPT_RETURNTRANSFER, 1);
+  $tag_return = curl_exec($tags)
   
   $region = curl_init();
-  $url = "http://169.254.169.254/metadata/v1/region";
-  $region = curl_setopt($region, CURLOPT_URL, $url);
-  curl_close($zone);
-
+  $region_url = "http://169.254.169.254/metadata/v1/region";
+  curl_setopt($region, CURLOPT_URL, $region_url);
+  curl_setopt($region, CURLOPT_RETURNTRANSFER, 1);
+  $region_return = curl_exec($region)
   
+    
   $id = curl_init();
-  $url = "http://169.254.169.254/metadata/v1/id";
-  $id = curl_setopt($id, CURLOPT_URL, $url);
-  curl_close($id);
+  $id_url = "http://169.254.169.254/metadata/v1/id";
+  curl_setopt($id, CURLOPT_URL, $id_url);
+  curl_setopt($id, CURLOPT_RETURNTRANSFER, 1);
+  $id_return = curl_exec($id)
+
   ?>
 
 <body>
   <div class="container">
     <div class="content">
       <h1>Terramino</h1>
-      <p><span class="attribute-name">Droplet Tags:</span><code><?php echo curl_exec($tags); ?></code></p>
-      <p><span class="attribute-name">Droplet ID:</span><code><?php echo curl_exec($id); ?></code></p>
-      <p><span class="attribute-name">Droplet Region:</span><code><?php echo curl_exec($region); ?></code></p>
+      <p><span class="attribute-name">Droplet Tags:</span><code><?php echo curl_exec($tag_return); ?></code></p>
+      <p><span class="attribute-name">Droplet ID:</span><code><?php echo curl_exec($id_return); ?></code></p>
+      <p><span class="attribute-name">Droplet Region:</span><code><?php echo curl_exec($region_return); ?></code></p>
       <p>Use left and right arrow keys to move blocks.<br />Use up arrow key to flip block.</p>
     </div>
     <div class="content">
