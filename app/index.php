@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Terramino</title>
+  <title>Tu's Terramino</title>
   <link rel="icon" href="https://www.terraform.io/favicon.ico" type="image/x-icon" />
   <style>
     html,
