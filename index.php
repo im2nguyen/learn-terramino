@@ -52,7 +52,7 @@
   <div class="container">
     <div class="content">
       <h1>Terramino</h1>
-      <p><h2>Welcome to the Terramino App on a DigitalOcean Droplet</h2></p>
+      <h2>Welcome to the Terramino App on a DigitalOcean Droplet</h2>
       <p>Use left and right arrow keys to move blocks.<br />Use up arrow key to flip block.</p>
     </div>
     <div class="content">
