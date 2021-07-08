@@ -55,7 +55,7 @@
 <body>
   <div class="container">
     <div class="content">
-      <h1>Terramino</h1>
+      <h1>Rachel's Terramino</h1>
       <p><code><?php echo $message; ?></code></p>
       <p><span class="attribute-name">Git Hash:</span><code><?php echo $hash; ?></code></p>
       <p>Use left and right arrow keys to move blocks.<br />Use up arrow key to flip block.</p>
