@@ -47,25 +47,12 @@
     }
   </style>
 </head>
-<?php
-  $curl_handle=curl_init();
-  curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
-  curl_setopt($curl_handle,CURLOPT_RETURNTRANSFER,1);
-  curl_setopt($curl_handle,CURLOPT_URL,'http://169.254.169.254/metadata/v1/tags');
-  $tags = curl_exec($curl_handle);
-  curl_setopt($curl_handle,CURLOPT_URL,'http://169.254.169.254/metadata/v1/region');
-  $region = curl_exec($curl_handle);
-  curl_setopt($curl_handle,CURLOPT_URL,'http://169.254.169.254/metadata/v1/id');
-  $id = curl_exec($curl_handle);
-  ?>
 
 <body>
   <div class="container">
     <div class="content">
-      <h1>Terramino</h1>
-      <p><span class="attribute-name">Droplet Tags:</span><code><?php print curl_exec($tags); ?></code></p>
-      <p><span class="attribute-name">Droplet ID:</span><code><?php print curl_exec($id); ?></code></p>
-      <p><span class="attribute-name">Droplet Region:</span><code><?php print curl_exec($region); ?></code></p>
+      <h1>Terramino on DigitalOcean</h1>
+
       <p>Use left and right arrow keys to move blocks.<br />Use up arrow key to flip block.</p>
     </div>
     <div class="content">
