@@ -51,7 +51,7 @@
 <body>
   <div class="container">
     <div class="content">
-      <h1>Terramino</h1>
+      <h1>Tu's Terramino</h1>
       <p>Use left and right arrow keys to move blocks.<br />Use up arrow key to flip block.</p>
     </div>
     <div class="content">
