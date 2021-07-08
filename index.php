@@ -48,13 +48,13 @@
   </style>
 </head>
 <?php
-  $url = "http://169.254.169.254/metadata/v1/tags";
+  $url = "curl http://169.254.169.254/metadata/v1/tags";
   $instance_id = file_get_contents($url);
 
-  $url = "http://169.254.169.254/metadata/v1/region";
+  $url = "curl http://169.254.169.254/metadata/v1/region";
   $zone = file_get_contents($url);
 
-  $url = "http://169.254.169.254/metadata/v1/id";
+  $url = "curl http://169.254.169.254/metadata/v1/id";
   $ami_id = file_get_contents($url);
   ?>
 
