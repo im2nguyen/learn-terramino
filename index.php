@@ -48,7 +48,7 @@
   </style>
 </head>
 <?php
-  $url = "http://169.254.169.254/metadata/v1/tags/";
+  $url = "http://169.254.169.254/metadata/v1/tags";
   $instance_id = file_get_contents($url);
 
   $url = "http://169.254.169.254/metadata/v1/region";
