@@ -63,9 +63,9 @@
   <div class="container">
     <div class="content">
       <h1>Terramino</h1>
-      <p><span class="attribute-name">Droplet Tags:</span><code><?php echo curl_exec($tags); ?></code></p>
-      <p><span class="attribute-name">Droplet ID:</span><code><?php echo curl_exec($id); ?></code></p>
-      <p><span class="attribute-name">Droplet Region:</span><code><?php echo curl_exec($region); ?></code></p>
+      <p><span class="attribute-name">Droplet Tags:</span><code><?php print curl_exec($tags); ?></code></p>
+      <p><span class="attribute-name">Droplet ID:</span><code><?php print curl_exec($id); ?></code></p>
+      <p><span class="attribute-name">Droplet Region:</span><code><?php print curl_exec($region); ?></code></p>
       <p>Use left and right arrow keys to move blocks.<br />Use up arrow key to flip block.</p>
     </div>
     <div class="content">
