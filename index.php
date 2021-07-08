@@ -327,12 +327,6 @@
     // start the game
     rAF = requestAnimationFrame(loop);
   </script>
-<footer>
-    <div class="footer-wrapper">
-      <p>Made with ❤️ and <a href="https://terraform.io/" target="_blank" rel="external">Terraform</a> <a href="https://digitalocean.com/" target="_blank" rel="external">on DigitalOcean</a> </p>
-      <p></p>
-    </div>
-</footer>
   
 </body>
 
